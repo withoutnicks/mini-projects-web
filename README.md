@@ -12,21 +12,15 @@ Sharing a little of what I know :)
 This repository is a collection of projects to address various basic concepts of HTML, CSS and JS.
 ```
 
-| Project               | 🔗          |
+| Main Project               | 🔗          |
 | :-------------:       |:-------------:|
-| Age calculator        | [Preview](https://markdownlivepreview.com/) |
-| Drawing app           | [Preview](https://markdownlivepreview.com/) |
-| Chronometer           | [Preview](https://markdownlivepreview.com/) |
-| Dark mode             | [Preview](https://markdownlivepreview.com/) |
-| Snake game            | [Preview](https://markdownlivepreview.com/) |
-| Github Profile Finder | [Preview](https://markdownlivepreview.com/) |
-| Guess number          | [Preview](https://markdownlivepreview.com/) |
-| Image Color Picker    | [Preview](https://markdownlivepreview.com/) |
-| Memes Generate        | [Preview](https://markdownlivepreview.com/) |
-| Menu Responsive       | [Preview](https://markdownlivepreview.com/) |
-| Sticky Navigation     | [Preview](https://markdownlivepreview.com/) |
-| Text to Voice         | [Preview](https://markdownlivepreview.com/) |
-| Weather app           | [Preview](https://markdownlivepreview.com/) |
+| Age calculator        | [Preview](https://age-calculator-wt.netlify.app/) |
+| Drawing app           | [Preview](https://drawing-app-wt.netlify.app) |
+| Chronometer           | [Preview](https://chronometer-wt.netlify.app/) |
+| Dark mode             | [Preview](https://darkmode-wt.netlify.app/) |
+| Snake game            | [Preview](https://gamesnake-wt.netlify.app/) |
+| Github Profile Finder | [Preview](https://github-profile-finder-wt.netlify.app/) |
+| Image Color Picker    | [Preview](https://image-color-picker-wt.netlify.app/) |
 
 > 💬
 
