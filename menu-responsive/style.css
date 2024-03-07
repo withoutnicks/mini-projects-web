@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  box-sizing: border-box;
+  background-color: #232946;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100vh;
+}
+
+nav {
+  background-color: #121629;
+  color: #fff;
+  padding: 16px;
+}
+
+.collapsed {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#logo__img {
+  width: 40px;
+}
+
+nav .mobile {
+  display: none;
+}
+
+nav .header__logo{
+  min-width: 15%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  padding: 20px 25px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  color: #121629;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+nav .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pad: 0 20px;
+}
+
+nav .active {
+  background-color: #fff;
+  color: #232946;
+}
+
+nav .desktop .primary__links,
+nav .desktop .secondary__links {
+  display: flex;
+  gap: 8px;
+}
+
+nav .desktop .secondary__links.mini {
+  display: none;
+}
+
+nav .secondary__links.mini .secondary__modal a{
+  color: #232946;
+}
+
+@media screen and (max-width: 800px){
+  nav .secondary__links.full {
+    display: none;
+  }
+
+  nav .secondary__links.mini {
+    display: block !important;
+  }
+
+  nav .secondary__links.mini .secondary__modal {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  nav .secondary__links.mini:hover .secondary__modal {
+    display: block;
+    margin-top: 1px;
+    right: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
+
+  nav .mobile .mobile__header{
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+      border: 0;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 8px 16px;
+      cursor: pointer;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

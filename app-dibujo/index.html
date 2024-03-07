@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App de dibujo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="../icon.png" type="image/x-icon" />
+    <script src="./main.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="canvas" width="600" height="500"></canvas>
+
+    <div class="herramientas">
+      <button id="reducir">
+        <i class="bx bx-down-arrow-alt"></i>
+      </button>
+      <span id="size">10</span>
+      <button id="aumentar">
+        <i class="bx bx-up-arrow-alt"></i>
+      </button>
+      <input type="color" id="color" />
+      <button id="clear">
+        <i class="bx bx-trash"></i>
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+  background-color: #f3f3f3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#btn-convert {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}

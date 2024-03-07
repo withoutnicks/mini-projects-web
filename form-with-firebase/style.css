@@ -1,0 +1,47 @@
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  padding: 4px;
+}
+
+button {
+  margin-top: 4px;
+  padding: 8px 32px;
+  background-color: lightcoral;
+  border-radius: 5px;
+
+  &:disabled {
+    background-color: lightslategray;
+    color: #000;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: small;
+  margin-top: 3px;
+}
+
+#success {
+  transition: all 0.3s ease;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 8px 16px;
+  color: #000;
+  font-size: medium;
+  margin-top: 5px;
+}

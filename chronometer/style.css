@@ -1,0 +1,71 @@
+:root {
+  --color-primary: #7986cb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  background-color: #fff;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 0.6em auto;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 0 50px 0;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.timerDisplay {
+  width: 92%;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: monospace;
+  color: #2b2b2b;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.btns {
+  width: 90%;
+  margin: 30px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+
+  & button {
+    width: 120px;
+    height: 45px;
+    background-color: var(--color-primary);
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-family: serif;
+  }
+
+  & button:nth-child(2) {
+    background-color: lightcoral;
+  }
+
+  & button:nth-child(3) {
+    background-color: lightgreen;
+  }
+}

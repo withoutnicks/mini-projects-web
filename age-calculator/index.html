@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+  <title>Age Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h4>Age Calculator</h4>
+
+    <div class="container-blocks">
+      <div class="block">
+        <label for="day" class="title">Day</label>
+        <input 
+            type="text"
+            id="day"
+            placeholder="dd"
+            required 
+            minlength="1"
+            maxlength="2"
+          />
+      </div>
+      <div class="block">
+        <label for="month" class="title">Month</label>
+        <input 
+          type="text"
+          id="month"
+          placeholder="mm"
+          required 
+          minlength="1"
+          maxlength="2"
+        />
+      </div>
+  
+      <div class="block">
+        <label for="year" class="title">Year</label>
+        <input 
+          type="text"
+          id="year"
+          placeholder="yyyy"
+          required 
+          minlength="4"
+          maxlength="4"
+        />
+      </div>
+    </div>
+
+    <input class="btnCalculate" type="button" id="btn" value="Calculate Age" />
+
+    <div id="age"></div>
+  </div>
+</body>
+</html>

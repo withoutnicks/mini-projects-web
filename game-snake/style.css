@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+body {
+  font-family: "VT323", monospace;
+  max-width: 500px;
+  margin: 16px auto 0 auto;
+  background-color: whitesmoke;
+  font-size: 30px;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+#logo {
+  width: 460px;
+  height: 460px;
+  pointer-events: none;
+}
+
+.presentation {
+  text-align: center;
+  align-items: center;
+}
+
+#board,
+.boardInfo {
+  max-width: 500px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+#start,
+.boardInfo {
+  font-size: 24px;
+}
+
+#txtScore {
+  display: none;
+  margin-top: 8px;
+}
+
+.boardInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0 auto;
+}
+
+#start {
+  font-family: "VT323", monospace;
+  background: #881400;
+  border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+  border-left: 6px inset rgba(0, 0, 0, 0.5);
+  border-right: 6px inset rgba(255, 255, 255, 0.5);
+  border-top: 6px inset rgba(255, 255, 255, 0.5);
+  color: white;
+  cursor: pointer;
+  font-size: 2.5rem;
+  min-width: 200px;
+  padding: 0.5rem;
+
+  &:focus,
+  &:hover {
+    background: #A81000;
+  }
+}
+
+#start.playing {
+  margin-top: 8px;
+  font-size: 2rem;
+  min-width: 50px;
+  padding: 0 8px;
+  color: #000;
+  background-color: #ccc;
+}
+
+#start.stylegameover {
+  margin-top: 8px;
+  font-size: 2rem;
+  min-width: 50px;
+  padding: 0 8px;
+  color: #fff;
+  background-color: #0000BC;
+}
+
+#scoreBoard {
+  display: inline-flex;
+}
+
+.square {
+  aspect-ratio: 1;
+}
+
+.emptySquare {
+  background-color: #666699;
+}
+
+.snakeSquare {
+  background-color: #B9CF6B;
+}
+
+.foodSquare {
+  background-color: #e7471d;
+}

@@ -1,0 +1,21 @@
+body {
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+input {
+  width: 100px;
+  height: 32px;
+  padding: 4px;
+  outline-color: rgb(56, 185, 207);
+
+  &[type=button]{
+    background-color: lightgreen;
+    padding: 0 8px;
+    width: auto;
+  }
+}
+
+#message {
+  font-weight: bold;
+}

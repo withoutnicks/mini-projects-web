@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+    <title>Image Color Picker</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="img-container">
+            <img id="image" src=""/>
+        </div>
+
+        <div class="btns-container">
+            <input type="file" id="file">
+            <label for="file">Select photo</label>
+            <button id="pick-color">Pick Color</button>
+        </div>
+
+        <div id="error" class="hide"></div>
+
+        <div id="result" class="hide">
+            <div>
+                <input type="text" id="hex-reference" placeholder="here views code hex" readonly/>
+                <button onclick="copy('hex-reference')">
+                    <ion-icon name="copy-outline"></ion-icon>
+                </button>
+            </div>
+            <div>
+                <input type="text" id="rgb-reference" placeholder="here views code rgb" readonly/>
+                <button onclick="copy('rbg-reference')">
+                    <ion-icon name="copy-outline"></ion-icon>
+                </button>
+            </div>
+            <div id="picked-color-ref"></div>
+        </div>
+    </div>
+</body>
+</html>
+

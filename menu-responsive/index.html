@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/c851fe2c54.js" crossorigin="anonymous"></script>
+    <script src="./main.js" defer></script>
+    <title>Menu responsive</title>
+  </head>
+  <body>
+    <nav>
+      <!-- View in mobiles -->
+      <div class="mobile">
+        <div class="mobile__header">
+          <div class="header__logo">
+            <img
+              id="logo__img"
+              src="../icon.png"
+              alt="Logo general de la web"
+            />
+          </div>
+          <div class="header__more">
+            <button id="btnShowMenu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <div class="links collapsed">
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Sign In</a>
+          <a href="#">Login</a>
+        </div>
+      </div>
+
+      <!-- View in pc and laptops-->
+      <div class="desktop">
+        <div class="header__logo">
+          <img id="logo__img" src="../icon.png" alt="Logo general de la web" />
+        </div>
+
+        <div class="primary__links">
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="secondary__links full">
+          <a href="#">Sign In</a>
+          <a href="#" class="active">Login</a>
+        </div>
+
+        <div class="secondary__links mini">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+          <div class="secondary__modal">
+            <a href="#">Sign In</a>
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="message" style="margin-top: 20px;">
+      <img src="../message.png" style="width: 37%" alt="read image">
+    </main>
+  </body>
+</html>

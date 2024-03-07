@@ -1,0 +1,45 @@
+body {
+  background-color: #242629;
+}
+
+h1 {
+  margin: 0 0 16px 0;
+}
+
+.container {
+  background-color: #16161a;
+  color: #f3f3f3;
+  text-align: center;
+  width: fit-content;
+  padding: 16px 32px;
+  margin: 0 auto;
+
+  & input,
+  button {
+    padding: 8px;
+    outline: none;
+  }
+
+  & button {
+    background-color: #2cb67d;
+    border-color: #2cb67d;
+  }
+}
+
+#climateData {
+  text-align: center;
+  padding: 8px;
+  font-family: monospace;
+}
+
+h2 {
+  display: inline;
+}
+
+img {
+  width: 100px;
+}
+
+img.flag{
+  width: 18px;
+}
