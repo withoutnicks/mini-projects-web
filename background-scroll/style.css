@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+p {
+  color: gray;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./bgimage.jpg);
+  background-size: 140%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 100px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 32px;
+  }
+}

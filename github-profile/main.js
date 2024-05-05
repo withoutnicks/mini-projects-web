@@ -1,37 +1,37 @@
-const APIURL = "https://api.github.com/users/";
+const APIURL = 'https://api.github.com/users/'
 
-const main = document.getElementById("main");
-const form = document.getElementById("form");
-const search = document.getElementById("search");
+const main = document.getElementById('main')
+const form = document.getElementById('form')
+const search = document.getElementById('search')
 
-async function getUser(username) {
+async function getUser (username) {
   try {
-    const { data } = await axios(APIURL + username);
+    const { data } = await axios(APIURL + username)
 
-    createUserCard(data);
-    getRepos(username);
+    createUserCard(data)
+    getRepos(username)
   } catch (err) {
-    if (err.response.status == 404) {
-      createErrorCard("Perfil no encontrado 🕵🏽‍♂️");
+    if (err.response.status === 404) {
+      createErrorCard('Perfil no encontrado 🕵🏽‍♂️')
     }
   }
 }
 
-async function getRepos(username) {
+async function getRepos (username) {
   try {
-    const { data } = await axios(APIURL + username + "/repos?sort=created");
+    const { data } = await axios(APIURL + username + '/repos?sort=created')
 
-    addReposToCard(data);
+    addReposToCard(data)
   } catch (err) {
-    createErrorCard("Problemas buscando los repos");
+    createErrorCard('Problemas buscando los repos')
   }
 }
 
-function createUserCard(user) {
-  const userID = user.name || user.login;
-  const userBio = user.bio ? `<p>${user.bio}</p>` : "❌ - Sin descripcion";
+function createUserCard (user) {
+  const userID = user.name || user.login
+  const userBio = user.bio ? `<p>${user.bio}</p>` : '❌ - Sin descripcion'
 
-  const cardHTML = /*html*/ `
+  const cardHTML = /* html */ `
   <div class="card">
     <div>
       <img src="${user.avatar_url}" alt="${user.name}" class="avatar"">
@@ -49,42 +49,42 @@ function createUserCard(user) {
       <div id="repos"></div>
     </div>
   </div>
-  `;
+  `
 
-  main.innerHTML = cardHTML;
+  main.innerHTML = cardHTML
 }
 
-function createErrorCard(msg) {
+function createErrorCard (msg) {
   const cardHTML = `
     <div class="card">
       <h1>${msg}</h1>
     </div>
-  `;
+  `
 
-  main.innerHTML = cardHTML;
+  main.innerHTML = cardHTML
 }
 
-function addReposToCard(repos) {
-  const reposEl = document.getElementById('repos');
+function addReposToCard (repos) {
+  const reposEl = document.getElementById('repos')
 
   repos
-      .slice(0.5)
-      .forEach(repo => {
-        const repoEl = document.createElement('a');
+    .slice(0.5)
+    .forEach(repo => {
+      const repoEl = document.createElement('a')
 
-        repoEl.classList.add('repo');
-        repoEl.href = repo.html_url;
-        repoEl.target = '_black';
-        repoEl.innerText = repo.name;
+      repoEl.classList.add('repo')
+      repoEl.href = repo.html_url
+      repoEl.target = '_black'
+      repoEl.innerText = repo.name
 
-        reposEl.appendChild(repoEl);
-      });
+      reposEl.appendChild(repoEl)
+    })
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
 
-  const user = search.value;
+  const user = search.value
 
   if (user) {
     getUser(user)

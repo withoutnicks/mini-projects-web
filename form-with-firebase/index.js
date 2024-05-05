@@ -6,10 +6,10 @@ const firebaseConfig = {
    * Get your credentials here:
    * https://support.google.com/firebase/answer/7015592?hl=es#zippy=%2Cen-este-art%C3%ADculo
    */
-};
+}
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const app = initializeApp(firebaseConfig)
+const db = getFirestore(app)
 
 // App
 const $form = document.getElementById('form')
@@ -47,14 +47,14 @@ $form.addEventListener('submit', async (e) => {
 
   if (!$name.value.trim() !== '' && $email.value.trim() !== '' && $password.value.trim() !== '') {
     try {
-        const docRef = await addDoc(collection(db, "users"), {
+      const docRef = await addDoc(collection(db, 'users'), {
         name: $name.value,
         email: $email.value,
         password: $password.value
-      });
-      console.log("Document written with ID: ", docRef.id);
+      })
+      console.log('Document written with ID: ', docRef.id)
     } catch (e) {
-      console.error("Error adding document: ", e);
+      console.error('Error adding document: ', e)
     }
     document.getElementById('success').style.display = 'block'
     $form.reset()
